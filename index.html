@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCharge Fleet Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>EcoCharge Fleet Dashboard</h1>
+        <p>Monitor your electric vehicle fleet and estimate charging costs</p>
+    </header>
+
+    <main>
+        <!-- Feature A: Fleet Overview -->
+        <section class="fleet-section">
+            <h2>Fleet Overview</h2>
+            <div id="vehicle-list" class="vehicle-list">
+                <!-- Vehicles will be injected here dynamically -->
+            </div>
+        </section>
+
+        <!-- Feature B: Charging Cost Calculator -->
+        <section class="calculator-section">
+            <h2>Charging Cost Calculator</h2>
+            <form id="cost-form">
+                <div class="form-group">
+                    <label for="vehicle-select">Select Vehicle:</label>
+                    <select id="vehicle-select" required>
+                        <option value="">-- Choose a vehicle --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="charging-hours">Charging Duration (hours):</label>
+                    <input type="number" id="charging-hours" step="any" min="0" required>
+                </div>
+                <button type="submit">Calculate Cost</button>
+            </form>
+            <div id="cost-result" class="cost-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EcoCharge Innovations. Prototype for ICS 432.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
